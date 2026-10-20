@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tropical Açaí | Monte o Seu Açaí Perfeito</title>
+  <meta name="description" content="O açaí mais cremoso e tropical da cidade. Monte seu copo com frutas frescas, acompanhamentos e cremes especiais!">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22><text y=%2226%22 font-size=%2224%22>🍧</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Fredoka"', 'sans-serif'],
+          },
+          colors: {
+            acai: {
+              50: '#faf5ff',
+              100: '#f3e8ff',
+              200: '#e9d5ff',
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#581c87',
+              900: '#3b0764',
+              950: '#23023e',
+            },
+            tropical: {
+              lime: '#a3e635',
+              green: '#22c55e',
+              emerald: '#10b981',
+              yellow: '#facc15',
+              purple: '#4c1d95',
+            }
+          },
+          boxShadow: {
+            'glow-lime': '0 0 25px -5px rgba(163, 230, 53, 0.4)',
+            'glow-purple': '0 0 35px -5px rgba(147, 51, 234, 0.35)',
+          },
+          animation: {
+            'float': 'float 3s ease-in-out infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #23023e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #7e22ce;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a3e635;
+    }
+
+    /* Selection styles */
+    .option-card.selected {
+      border-color: #a3e635 !important;
+      background: linear-gradient(145deg, rgba(163, 230, 53, 0.12), rgba(126, 34, 206, 0.35)) !important;
+      box-shadow: 0 0 20px -3px rgba(163, 230, 53, 0.3);
+    }
+    .option-card.selected .check-circle {
+      background-color: #a3e635 !important;
+      border-color: #a3e635 !important;
+      color: #23023e !important;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#1a002e] via-[#24003d] to-[#120021] text-gray-100 font-sans min-h-screen selection:bg-lime-400 selection:text-purple-950">
+
+  <!-- ================= TOP NOTIFICATION BAR ================= -->
+  <div class="bg-gradient-to-r from-purple-950 via-lime-500/20 to-purple-950 border-b border-lime-400/20 py-2 px-4 text-xs sm:text-sm text-center font-medium">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-lime-400 text-purple-950 font-bold text-xs">
+        ● ABERTO AGORA
+      </span>
+      <span>🚀 Entregas rápidas de 30 a 45 min • Açaí 100% puro do Pará</span>
+      <span class="hidden md:inline text-lime-400 font-bold">• Peça direto no WhatsApp!</span>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-purple-950/80 border-b border-purple-800/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-700 via-purple-600 to-lime-400 p-0.5 shadow-lg shadow-purple-900/50 group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-purple-950 rounded-[14px] flex items-center justify-center text-2xl">
+            🍧
+          </div>
+        </div>
+        <div>
+          <span class="font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-white block leading-none">
+            Tropical<span class="text-lime-400">Açaí</span>
+          </span>
+          <span class="text-[10px] tracking-widest uppercase font-semibold text-purple-300/80">
+            Açaí Concept & Lounge
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300">
+        <a href="#inicio" class="hover:text-lime-400 transition-colors">Início</a>
+        <a href="#diferenciais" class="hover:text-lime-400 transition-colors">Diferenciais</a>
+        <a href="#montador" class="hover:text-lime-400 transition-colors flex items-center gap-1.5 text-lime-400">
+          <span>Monte o Seu</span>
+          <span class="w-2 h-2 rounded-full bg-lime-400 animate-ping"></span>
+        </a>
+        <a href="#avaliacoes" class="hover:text-lime-400 transition-colors">Avaliações</a>
+      </nav>
+
+      <!-- Action Button -->
+      <a href="#montador" class="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-lime-400 hover:bg-lime-300 text-purple-950 font-bold text-sm shadow-glow-lime transition-all duration-300 hover:scale-105 active:scale-95">
+        <span>Montar Meu Açaí</span>
+        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="inicio" class="relative pt-12 pb-20 overflow-hidden">
+    <!-- Ambient Light Effects -->
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-48 -right-32 w-80 h-80 bg-lime-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Text Content -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-900/60 border border-purple-700/50 backdrop-blur-md">
+            <span class="text-lime-400 text-lg">🌴</span>
+            <span class="text-xs sm:text-sm font-semibold text-purple-200">A Experiência Mais Tropical & Gostosa da Cidade</span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] tracking-tight">
+            Monte o Açaí dos Seus Sonhos, <span class="bg-gradient-to-r from-lime-300 via-lime-400 to-emerald-400 bg-clip-text text-transparent">Do Seu Jeito!</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-purple-200/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Açaí artesanal super cremoso, sem cristais de gelo e sem xaropes artificiais. Escolha o tamanho, a base, seus acompanhamentos favoritos e cremes premium em poucos cliques.
+          </p>
+
+          <!-- Badges / Highlights -->
+          <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 text-xs sm:text-sm font-semibold">
+            <div class="flex items-center gap-2 bg-purple-950/70 border border-purple-800/60 px-3.5 py-2 rounded-xl text-purple-200">
+              <span class="text-lime-400 text-base">✓</span> Fruta 100% Nativa
+            </div>
+            <div class="flex items-center gap-2 bg-purple-950/70 border border-purple-800/60 px-3.5 py-2 rounded-xl text-purple-200">
+              <span class="text-lime-400 text-base">✓</span> Cremes Nobres
+            </div>
+            <div class="flex items-center gap-2 bg-purple-950/70 border border-purple-800/60 px-3.5 py-2 rounded-xl text-purple-200">
+              <span class="text-lime-400 text-base">✓</span> Pedido Direto no Zap
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#montador" class="w-full sm:w-auto text-center px-8 py-4 rounded-2xl bg-gradient-to-r from-lime-400 to-lime-300 text-purple-950 font-extrabold text-base shadow-glow-lime hover:scale-105 active:scale-95 transition-all">
+              🍧 Montar Meu Copo Agora
+            </a>
+            <a href="#como-funciona" class="w-full sm:w-auto text-center px-7 py-4 rounded-2xl bg-purple-900/40 hover:bg-purple-900/70 border border-purple-700/60 text-white font-bold text-base transition-all">
+              Como Funciona?
+            </a>
+          </div>
+
+          <!-- Social Proof -->
+          <div class="pt-4 flex items-center justify-center lg:justify-start gap-4">
+            <div class="flex -space-x-2">
+              <img class="w-10 h-10 rounded-full border-2 border-purple-900 object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces" alt="Cliente">
+              <img class="w-10 h-10 rounded-full border-2 border-purple-900 object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces" alt="Cliente">
+              <img class="w-10 h-10 rounded-full border-2 border-purple-900 object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces" alt="Cliente">
+              <div class="w-10 h-10 rounded-full border-2 border-purple-900 bg-lime-400 text-purple-950 font-bold text-xs flex items-center justify-center">
+                +2k
+              </div>
+            </div>
+            <div class="text-left text-xs sm:text-sm">
+              <div class="flex text-amber-400">★★★★★</div>
+              <p class="text-purple-200/80 font-medium"><strong>4.9 de 5</strong> por mais de 2.500 fãs de açaí</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Hero Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-sm sm:max-w-md">
+            
+            <!-- Glow background -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-purple-600/40 via-lime-400/20 to-purple-800/40 rounded-3xl blur-2xl"></div>
+
+            <!-- Card container -->
+            <div class="relative bg-gradient-to-b from-purple-900/80 to-purple-950/90 border border-purple-700/60 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-2xl text-center space-y-6">
+              
+              <!-- Floating Pill -->
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lime-400/10 border border-lime-400/30 text-lime-300 text-xs font-bold uppercase tracking-wider">
+                ⚡ Açaí Express Delivery
+              </div>
+
+              <!-- Main Illustration / Graphic -->
+              <div class="relative py-4 flex justify-center">
+                <div class="w-56 h-56 rounded-full bg-gradient-to-tr from-purple-900 via-purple-700 to-lime-500/30 p-2 shadow-2xl animate-float flex items-center justify-center relative overflow-hidden">
+                  <div class="w-full h-full rounded-full bg-purple-950 flex flex-col items-center justify-center p-4 text-center">
+                    <span class="text-7xl mb-2 drop-shadow-lg">🍧</span>
+                    <span class="font-display font-bold text-lg text-white">Tigela Tropical</span>
+                    <span class="text-xs text-lime-400 font-semibold">100% Puro & Refrescante</span>
+                  </div>
+                </div>
+
+                <!-- Floating tags -->
+                <div class="absolute top-2 -left-4 sm:-left-6 bg-purple-900/90 border border-purple-700 px-3.5 py-2 rounded-2xl shadow-xl backdrop-blur-md flex items-center gap-2">
+                  <span class="text-xl">🍓</span>
+                  <div class="text-left">
+                    <p class="text-[10px] text-purple-300">Frutas Frescas</p>
+                    <p class="text-xs font-bold text-white">Corte Diário</p>
+                  </div>
+                </div>
+
+                <div class="absolute bottom-2 -right-4 sm:-right-6 bg-purple-900/90 border border-purple-700 px-3.5 py-2 rounded-2xl shadow-xl backdrop-blur-md flex items-center gap-2">
+                  <span class="text-xl">🍫</span>
+                  <div class="text-left">
+                    <p class="text-[10px] text-purple-300">Cremes Nobres</p>
+                    <p class="text-xs font-bold text-lime-400">Nutella & Ninho</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mini summary banner -->
+              <div class="bg-purple-950/70 border border-purple-800/80 rounded-2xl p-4 flex items-center justify-between">
+                <div class="text-left">
+                  <span class="text-xs text-purple-300">Copos a partir de</span>
+                  <p class="text-2xl font-black text-lime-400">R$ 14,00</p>
+                </div>
+                <a href="#montador" class="px-4 py-2 rounded-xl bg-purple-800 hover:bg-purple-700 text-white font-bold text-xs transition-colors">
+                  Personalizar →
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMO FUNCIONA ================= -->
+  <section id="como-funciona" class="py-16 bg-purple-950/40 border-y border-purple-800/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-lime-400 font-bold text-xs uppercase tracking-widest">Simples & Rápido</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-1">Como Funciona Seu Pedido?</h2>
+        <p class="text-purple-200/80 text-sm sm:text-base mt-2">Sem complicação e sem filas. Do montador direto para a sua porta!</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Passo 1 -->
+        <div class="bg-purple-900/30 border border-purple-800/50 p-6 rounded-2xl relative group hover:border-lime-400/50 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-purple-800/80 border border-purple-700 flex items-center justify-center font-display font-extrabold text-lime-400 text-lg mb-4 group-hover:scale-110 transition-transform">
+            01
+          </div>
+          <h3 class="text-white font-bold text-lg mb-1">Escolha o Copo</h3>
+          <p class="text-purple-300 text-sm">Selecione entre 300ml, 500ml ou a Tigela de 700ml com base na sua vontade.</p>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="bg-purple-900/30 border border-purple-800/50 p-6 rounded-2xl relative group hover:border-lime-400/50 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-purple-800/80 border border-purple-700 flex items-center justify-center font-display font-extrabold text-lime-400 text-lg mb-4 group-hover:scale-110 transition-transform">
+            02
+          </div>
+          <h3 class="text-white font-bold text-lg mb-1">Defina a Base</h3>
+          <p class="text-purple-300 text-sm">Tradicional puro, batido com banana, zero açúcar ou misturado com cupuaçu.</p>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="bg-purple-900/30 border border-purple-800/50 p-6 rounded-2xl relative group hover:border-lime-400/50 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-purple-800/80 border border-purple-700 flex items-center justify-center font-display font-extrabold text-lime-400 text-lg mb-4 group-hover:scale-110 transition-transform">
+            03
+          </div>
+          <h3 class="text-white font-bold text-lg mb-1">Frutas & Cremes</h3>
+          <p class="text-purple-300 text-sm">Aproveite seus acompanhamentos inclusos e turbine com Nutella, Ninho ou Pistache.</p>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="bg-purple-900/30 border border-purple-800/50 p-6 rounded-2xl relative group hover:border-lime-400/50 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-lime-400 text-purple-950 flex items-center justify-center font-display font-extrabold text-lg mb-4 group-hover:scale-110 transition-transform">
+            04
+          </div>
+          <h3 class="text-white font-bold text-lg mb-1">Envie no WhatsApp</h3>
+          <p class="text-purple-300 text-sm">O pedido chega pronto no nosso WhatsApp para preparo e envio imediato!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MONTADOR DE AÇAÍ (CORAÇÃO DA APLICAÇÃO) ================= -->
+  <section id="montador" class="py-20 relative">
+    <!-- Background Accents -->
+    <div class="absolute top-1/4 -left-40 w-96 h-96 bg-purple-700/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-0 w-96 h-96 bg-lime-400/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-lime-400/10 border border-lime-400/30 text-lime-400 text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
+          🍨 Construtor Interativo
+        </div>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Monte Seu Açaí Passo a Passo
+        </h2>
+        <p class="text-purple-200/80 text-base sm:text-lg mt-3">
+          Escolha suas preferências abaixo. O valor total e os limites de acompanhamento atualizam em tempo real!
+        </p>
+      </div>
+
+      <!-- Main Layout: Builder Steps (Left) + Live Sticky Cart Summary (Right) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- ================= BUILDER FORM (LEFT 8 COLS) ================= -->
+        <div class="lg:col-span-8 space-y-10">
+
+          <!-- ETAPA 1: TAMANHO DO COPO -->
+          <div class="bg-gradient-to-b from-purple-900/60 to-purple-950/70 border border-purple-800/60 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-xl relative overflow-hidden">
+            <div class="flex items-center justify-between border-b border-purple-800/60 pb-4 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-lime-400 text-purple-950 font-display font-black flex items-center justify-center text-sm">
+                  1
+                </span>
+                <div>
+                  <h3 class="text-xl font-bold text-white">Escolha o Tamanho do Copo</h3>
+                  <p class="text-xs text-purple-300">Cada tamanho inclui uma quantidade de acompanhamentos grátis</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full border border-lime-400/20">
+                Obrigatório
+              </span>
+            </div>
+
+            <!-- Size Options Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="size-options-container">
+              
+              <!-- 300ml -->
+              <div onclick="selectSize('300ml')" id="card-size-300ml" class="option-card cursor-pointer bg-purple-950/60 border-2 border-purple-800/80 hover:border-purple-600 rounded-2xl p-5 transition-all text-left relative flex flex-col justify-between group">
+                <div class="flex items-start justify-between mb-3">
+                  <span class="text-3xl">🥤</span>
+                  <div class="check-circle w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center text-xs font-bold transition-all">
+                    ✓
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-extrabold text-white text-lg">Copo 300ml</h4>
+                  <p class="text-xs text-lime-300 font-semibold mt-1">Inclui 3 acompanhamentos</p>
+                  <p class="text-xs text-purple-300/80 mt-1">Ideal para um lanche rápido e refrescante</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-purple-800/60 flex items-baseline justify-between">
+                  <span class="text-xs text-purple-400">Valor</span>
+                  <span class="text-xl font-black text-lime-400">R$ 14,00</span>
+                </div>
+              </div>
+
+              <!-- 500ml (DEFAULT / POPULAR) -->
+              <div onclick="selectSize('500ml')" id="card-size-500ml" class="option-card selected cursor-pointer bg-purple-950/60 border-2 border-lime-400 rounded-2xl p-5 transition-all text-left relative flex flex-col justify-between group">
+                <!-- Highlight badge -->
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-lime-400 to-emerald-400 text-purple-950 text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-md">
+                  ★ Mais Pedido
+                </div>
+                <div class="flex items-start justify-between mb-3">
+                  <span class="text-3xl">🍧</span>
+                  <div class="check-circle w-6 h-6 rounded-full border-2 border-lime-400 bg-lime-400 text-purple-950 flex items-center justify-center text-xs font-bold transition-all">
+                    ✓
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-extrabold text-white text-lg">Copo 500ml</h4>
+                  <p class="text-xs text-lime-300 font-semibold mt-1">Inclui 4 acompanhamentos</p>
+                  <p class="text-xs text-purple-300/80 mt-1">O tamanho clássico e perfeito para qualquer hora</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-purple-800/60 flex items-baseline justify-between">
+                  <span class="text-xs text-purple-400">Valor</span>
+                  <span class="text-xl font-black text-lime-400">R$ 20,00</span>
+                </div>
+              </div>
+
+              <!-- 700ml -->
+              <div onclick="selectSize('700ml')" id="card-size-700ml" class="option-card cursor-pointer bg-purple-950/60 border-2 border-purple-800/80 hover:border-purple-600 rounded-2xl p-5 transition-all text-left relative flex flex-col justify-between group">
+                <div class="flex items-start justify-between mb-3">
+                  <span class="text-3xl">🥣</span>
+                  <div class="check-circle w-6 h-6 rounded-full border-2 border-purple-600 flex items-center justify-center text-xs font-bold transition-all">
+                    ✓
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-extrabold text-white text-lg">Tigela 700ml</h4>
+                  <p class="text-xs text-lime-300 font-semibold mt-1">Inclui 5 acompanhamentos</p>
+                  <p class="text-xs text-purple-300/80 mt-1">Para quem é apaixonado ou quer dividir</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-purple-800/60 flex items-baseline justify-between">
+                  <span class="text-xs text-purple-400">Valor</span>
+                  <span class="text-xl font-black text-lime-400">R$ 28,00</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- ETAPA 2: ESCOLHA A BASE -->
+          <div class="bg-gradient-to-b from-purple-900/60 to-purple-950/70 border border-purple-800/60 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-xl relative">
+            <div class="flex items-center justify-between border-b border-purple-800/60 pb-4 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-lime-400 text-purple-950 font-display font-black flex items-center justify-center text-sm">
+                  2
+                </span>
+                <div>
+                  <h3 class="text-xl font-bold text-white">Escolha a Base</h3>
+                  <p class="text-xs text-purple-300">Todas as nossas bases são 100% artesanais e ultra cremosas</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full border border-lime-400/20">
+                1 Opção
+              </span>
+            </div>
+
+            <!-- Base Radio Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="base-options-container">
+              
+              <!-- Açaí Tradicional -->
+              <div onclick="selectBase('Açaí Tradicional')" id="card-base-tradicional" class="option-card selected cursor-pointer bg-purple-950/60 border-2 border-lime-400 rounded-2xl p-4 transition-all flex items-center justify-between group">
+                <div class="flex items-center gap-3.5">
+                  <span class="text-2xl p-2 rounded-xl bg-purple-900/60 border border-purple-800">🍇</span>
+                  <div>
+                    <h4 class="font-bold text-white text-base">Açaí Tradicional</h4>
+                    <p class="text-xs text-purple-300">Puro, cremoso e com sabor autêntico</p>
+                  </div>
+                </div>
+                <div class="check-circle w-5 h-5 rounded-full border-2 border-lime-400 bg-lime-400 text-purple-950 flex items-center justify-center text-[10px] font-bold">
+                  ✓
+                </div>
+              </div>
+
+              <!-- Açaí com Banana -->
+              <div onclick="selectBase('Açaí com Banana')" id="card-base-banana" class="option-card cursor-pointer bg-purple-950/60 border-2 border-purple-800/80 hover:border-purple-600 rounded-2xl p-4 transition-all flex items-center justify-between group">
+                <div class="flex items-center gap-3.5">
+                  <span class="text-2xl p-2 rounded-xl bg-purple-900/60 border border-purple-800">🍌</span>
+                  <div>
+                    <h4 class="font-bold text-white text-base">Açaí com Banana</h4>
+                    <p class="text-xs text-purple-300">Batido com banana madura natural</p>
+                  </div>
+                </div>
+                <div class="check-circle w-5 h-5 rounded-full border-2 border-purple-600 flex items-center justify-center text-[10px] font-bold">
+                  ✓
+                </div>
+              </div>
+
+              <!-- Açaí Zero Açúcar -->
+              <div onclick="selectBase('Açaí Zero Açúcar')" id="card-base-zero" class="option-card cursor-pointer bg-purple-950/60 border-2 border-purple-800/80 hover:border-purple-600 rounded-2xl p-4 transition-all flex items-center justify-between group">
+                <div class="flex items-center gap-3.5">
+                  <span class="text-2xl p-2 rounded-xl bg-purple-900/60 border border-purple-800">🌱</span>
+                  <div>
+                    <h4 class="font-bold text-white text-base">Açaí Zero Açúcar</h4>
+                    <p class="text-xs text-purple-300">Adoçado naturalmente com Stevia</p>
+                  </div>
+                </div>
+                <div class="check-circle w-5 h-5 rounded-full border-2 border-purple-600 flex items-center justify-center text-[10px] font-bold">
+                  ✓
+                </div>
+              </div>
+
+              <!-- Mix Açaí + Cupuaçu -->
+              <div onclick="selectBase('Mix Açaí + Cupuaçu')" id="card-base-cupuacu" class="option-card cursor-pointer bg-purple-950/60 border-2 border-purple-800/80 hover:border-purple-600 rounded-2xl p-4 transition-all flex items-center justify-between group">
+                <div class="flex items-center gap-3.5">
+                  <span class="text-2xl p-2 rounded-xl bg-purple-900/60 border border-purple-800">🥥</span>
+                  <div>
+                    <h4 class="font-bold text-white text-base">Mix Açaí + Cupuaçu</h4>
+                    <p class="text-xs text-purple-300">O contraste cítrico e cremoso perfeito</p>
+                  </div>
+                </div>
+                <div class="check-circle w-5 h-5 rounded-full border-2 border-purple-600 flex items-center justify-center text-[10px] font-bold">
+                  ✓
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- ETAPA 3: ACOMPANHAMENTOS GRÁTIS & EXTRAS -->
+          <div class="bg-gradient-to-b from-purple-900/60 to-purple-950/70 border border-purple-800/60 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-xl relative">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-purple-800/60 pb-4 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-lime-400 text-purple-950 font-display font-black flex items-center justify-center text-sm">
+                  3
+                </span>
+                <div>
+                  <h3 class="text-xl font-bold text-white">Acompanhamentos Grátis</h3>
+                  <p class="text-xs text-purple-300">
+                    Seu copo inclui <span id="label-free-limit" class="font-bold text-lime-400">4</span> itens grátis. Extras saem a <span class="font-bold text-lime-300">+R$ 2,00 cada</span>.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Dynamic Counter Badge -->
+              <div class="self-start sm:self-auto px-4 py-1.5 rounded-full bg-purple-950 border border-lime-400/40 flex items-center gap-2">
+                <span class="text-xs font-semibold text-purple-200">Selecionados:</span>
+                <span id="toppings-counter-badge" class="text-sm font-black text-lime-400">0 / 4</span>
+              </div>
+            </div>
+
+            <!-- Free Toppings Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5" id="toppings-container">
+              <!-- Rendered dynamically by JS -->
+            </div>
+
+            <!-- Notice on extra toppings -->
+            <div id="extra-toppings-alert" class="mt-4 p-3 rounded-xl bg-purple-950/70 border border-purple-800 text-xs text-purple-300 flex items-center gap-2">
+              <span class="text-lime-400 text-sm">💡</span>
+              <span>Dica: Você pode marcar quantos acompanhamentos quiser! Os excedentes ao limite do copo custam apenas <strong>R$ 2,00</strong> cada.</span>
+            </div>
+          </div>
+
+
+          <!-- ETAPA 4: ADICIONAIS PREMIUM / CREMES -->
+          <div class="bg-gradient-to-b from-purple-900/60 to-purple-950/70 border border-purple-800/60 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-xl relative">
+            <div class="flex items-center justify-between border-b border-purple-800/60 pb-4 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-lime-400 text-purple-950 font-display font-black flex items-center justify-center text-sm">
+                  4
+                </span>
+                <div>
+                  <h3 class="text-xl font-bold text-white">Cremes & Adicionais Premium</h3>
+                  <p class="text-xs text-purple-300">Turbine seu açaí com caldas e recheios nobres (opcional)</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-purple-300 bg-purple-800/40 px-3 py-1 rounded-full border border-purple-700/50">
+                Opcionais
+              </span>
+            </div>
+
+            <!-- Premium Items Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="premium-container">
+              
+              <!-- Nutella Original -->
+              <div onclick="togglePremium('Nutella Original', 5.00)" id="card-prem-nutella" class="option-card cursor-pointer bg-purple-950/60 border-2 border-purple-800/80 hover:border-purple-600 rounded-2xl p-4 transition-all flex flex-col justify-between group">
+                <div>
+                  <div class="flex items-start justify-between mb-2">
+                    <span class="text-3xl">🍫</span>
+                    <div class="check-circle w-5 h-5 rounded-full border-2 border-purple-600 flex items-center justify-center text-[10px] font-bold">
+                      ✓
+                    </div>
+                  </div>
+                  <h4 class="font-bold text-white text-base">Nutella Original</h4>
+                  <p class="text-xs text-purple-300/90 mt-1">Ferrero legítima e generosa</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-purple-800/60 flex items-center justify-between">
+                  <span class="text-[11px] text-purple-400">Adicional</span>
+                  <span class="text-base font-extrabold text-lime-400">+ R$ 5,00</span>
+                </div>
+              </div>
+
+              <!-- Creme de Ninho -->
+              <div onclick="togglePremium('Creme de Ninho', 4.00)" id="card-prem-ninho" class="option-card cursor-pointer bg-purple-950/60 border-2 border-purple-800/80 hover:border-purple-600 rounded-2xl p-4 transition-all flex flex-col justify-between group">
+                <div>
+                  <div class="flex items-start justify-between mb-2">
+                    <span class="text-3xl">🥛</span>
+                    <div class="check-circle w-5 h-5 rounded-full border-2 border-purple-600 flex items-center justify-center text-[10px] font-bold">
+                      ✓
+                    </div>
+                  </div>
+                  <h4 class="font-bold text-white text-base">Creme de Ninho</h4>
+                  <p class="text-xs text-purple-300/90 mt-1">Cremoso e aveludado da casa</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-purple-800/60 flex items-center justify-between">
+                  <span class="text-[11px] text-purple-400">Adicional</span>
+                  <span class="text-base font-extrabold text-lime-400">+ R$ 4,00</span>
+                </div>
+              </div>
+
+              <!-- Creme de Pistache -->
+              <div onclick="togglePremium('Creme de Pistache', 6.00)" id="card-prem-pistache" class="option-card cursor-pointer bg-purple-950/60 border-2 border-purple-800/80 hover:border-purple-600 rounded-2xl p-4 transition-all flex flex-col justify-between group">
+                <div>
+                  <div class="flex items-start justify-between mb-2">
+                    <span class="text-3xl">🫒</span>
+                    <div class="check-circle w-5 h-5 rounded-full border-2 border-purple-600 flex items-center justify-center text-[10px] font-bold">
+                      ✓
+                    </div>
+                  </div>
+                  <h4 class="font-bold text-white text-base">Creme de Pistache</h4>
+                  <p class="text-xs text-purple-300/90 mt-1">Pistache puro estilo italiano</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-purple-800/60 flex items-center justify-between">
+                  <span class="text-[11px] text-purple-400">Adicional</span>
+                  <span class="text-base font-extrabold text-lime-400">+ R$ 6,00</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- ETAPA 5: DADOS DE ENTREGA E PAGAMENTO -->
+          <div class="bg-gradient-to-b from-purple-900/60 to-purple-950/70 border border-purple-800/60 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-xl relative">
+            <div class="flex items-center justify-between border-b border-purple-800/60 pb-4 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-lime-400 text-purple-950 font-display font-black flex items-center justify-center text-sm">
+                  5
+                </span>
+                <div>
+                  <h3 class="text-xl font-bold text-white">Dados de Entrega & Pagamento</h3>
+                  <p class="text-xs text-purple-300">Preencha seus dados para finalizarmos via WhatsApp</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-5">
+              
+              <!-- Nome do Cliente -->
+              <div>
+                <label for="client-name" class="block text-xs font-bold text-purple-200 uppercase tracking-wider mb-2">
+                  Seu Nome Completo *
+                </label>
+                <input type="text" id="client-name" placeholder="Ex: Maria Silva" class="w-full bg-purple-950/90 border border-purple-700/80 focus:border-lime-400 rounded-xl px-4 py-3 text-white placeholder-purple-400/50 outline-none transition-colors">
+              </div>
+
+              <!-- Tipo de Entrega: Delivery vs Retirada -->
+              <div>
+                <label class="block text-xs font-bold text-purple-200 uppercase tracking-wider mb-2">
+                  Modalidade de Entrega *
+                </label>
+                <div class="grid grid-cols-2 gap-3">
+                  <button type="button" onclick="setDeliveryType('delivery')" id="btn-delivery-house" class="py-3 px-4 rounded-xl border-2 border-lime-400 bg-lime-400/10 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                    <span>🛵</span> Receber em Casa
+                  </button>
+                  <button type="button" onclick="setDeliveryType('pickup')" id="btn-delivery-pickup" class="py-3 px-4 rounded-xl border-2 border-purple-800 bg-purple-950/70 text-purple-300 font-bold text-sm flex items-center justify-center gap-2 hover:border-purple-600 transition-all">
+                    <span>🏪</span> Retirar no Balcão
+                  </button>
+                </div>
+              </div>
+
+              <!-- Campo Endereço (condicional se Delivery) -->
+              <div id="address-container">
+                <label for="client-address" class="block text-xs font-bold text-purple-200 uppercase tracking-wider mb-2">
+                  Endereço Completo de Entrega *
+                </label>
+                <input type="text" id="client-address" placeholder="Rua, Número, Bairro, Complemento..." class="w-full bg-purple-950/90 border border-purple-700/80 focus:border-lime-400 rounded-xl px-4 py-3 text-white placeholder-purple-400/50 outline-none transition-colors">
+              </div>
+
+              <!-- Forma de Pagamento -->
+              <div>
+                <label class="block text-xs font-bold text-purple-200 uppercase tracking-wider mb-2">
+                  Forma de Pagamento *
+                </label>
+                <div class="grid grid-cols-3 gap-2 sm:gap-3">
+                  <button type="button" onclick="setPaymentMethod('PIX')" id="pay-pix" class="payment-btn py-3 px-3 rounded-xl border-2 border-lime-400 bg-lime-400/10 text-white font-bold text-xs sm:text-sm flex flex-col items-center gap-1 transition-all">
+                    <span class="text-lg">⚡</span>
+                    <span>PIX</span>
+                  </button>
+                  <button type="button" onclick="setPaymentMethod('Cartão')" id="pay-card" class="payment-btn py-3 px-3 rounded-xl border-2 border-purple-800 bg-purple-950/70 text-purple-300 font-bold text-xs sm:text-sm flex flex-col items-center gap-1 hover:border-purple-600 transition-all">
+                    <span class="text-lg">💳</span>
+                    <span>Cartão</span>
+                  </button>
+                  <button type="button" onclick="setPaymentMethod('Dinheiro')" id="pay-cash" class="payment-btn py-3 px-3 rounded-xl border-2 border-purple-800 bg-purple-950/70 text-purple-300 font-bold text-xs sm:text-sm flex flex-col items-center gap-1 hover:border-purple-600 transition-all">
+                    <span class="text-lg">💵</span>
+                    <span>Dinheiro</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Observações Adicionais -->
+              <div>
+                <label for="order-notes" class="block text-xs font-bold text-purple-200 uppercase tracking-wider mb-2">
+                  Observações (Opcional)
+                </label>
+                <input type="text" id="order-notes" placeholder="Ex: Caprichar no leite em pó, troco para R$ 50..." class="w-full bg-purple-950/90 border border-purple-700/80 focus:border-lime-400 rounded-xl px-4 py-2.5 text-sm text-white placeholder-purple-400/50 outline-none transition-colors">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ================= STICKY SUMMARY / CART (RIGHT 4 COLS) ================= -->
+        <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-4">
+          
+          <div class="bg-gradient-to-b from-purple-900/90 via-purple-950 to-purple-950 border-2 border-purple-700/60 rounded-3xl p-6 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+            
+            <!-- Top badge -->
+            <div class="flex items-center justify-between pb-4 border-b border-purple-800/80 mb-4">
+              <div class="flex items-center gap-2">
+                <span class="text-xl">🧾</span>
+                <h3 class="font-display font-extrabold text-lg text-white">Resumo do Pedido</h3>
+              </div>
+              <span class="text-[10px] uppercase font-bold text-lime-400 bg-lime-400/10 px-2.5 py-0.5 rounded-full border border-lime-400/30">
+                Ao Vivo
+              </span>
+            </div>
+
+            <!-- Dynamic Items List -->
+            <div class="space-y-3 text-xs sm:text-sm">
+              
+              <!-- Copo -->
+              <div class="flex justify-between items-start text-purple-200">
+                <div>
+                  <span class="font-bold text-white block" id="summary-size">Copo 500ml</span>
+                  <span class="text-[11px] text-purple-400" id="summary-size-desc">Inclui até 4 acompanhamentos</span>
+                </div>
+                <span class="font-extrabold text-white" id="summary-size-price">R$ 20,00</span>
+              </div>
+
+              <!-- Base -->
+              <div class="flex justify-between items-center text-purple-200 pt-2 border-t border-purple-900">
+                <div>
+                  <span class="text-purple-400 text-[11px] block">Base escolhida:</span>
+                  <span class="font-bold text-white" id="summary-base">Açaí Tradicional</span>
+                </div>
+                <span class="text-[11px] text-lime-400 font-semibold">Incluso</span>
+              </div>
+
+              <!-- Acompanhamentos Grátis -->
+              <div class="pt-2 border-t border-purple-900">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-purple-400 text-[11px]">Acompanhamentos:</span>
+                  <span class="text-[11px] font-bold text-lime-400" id="summary-toppings-count">0 selecionados</span>
+                </div>
+                <div id="summary-toppings-list" class="text-xs text-purple-200 font-medium italic">
+                  Nenhum acompanhamento selecionado ainda
+                </div>
+              </div>
+
+              <!-- Acompanhamentos Extras (se houver) -->
+              <div id="summary-extra-toppings-row" class="hidden justify-between items-center text-purple-200 pt-2 border-t border-purple-900">
+                <div>
+                  <span class="font-bold text-amber-300 block" id="summary-extra-toppings-title">Extras (+R$ 2 cada)</span>
+                  <span class="text-[10px] text-purple-400" id="summary-extra-toppings-items"></span>
+                </div>
+                <span class="font-bold text-amber-300" id="summary-extra-toppings-price">R$ 0,00</span>
+              </div>
+
+              <!-- Adicionais Premium -->
+              <div class="pt-2 border-t border-purple-900">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-purple-400 text-[11px]">Cremes Premium:</span>
+                  <span class="font-bold text-white" id="summary-premium-price">R$ 0,00</span>
+                </div>
+                <div id="summary-premium-list" class="text-xs text-purple-300 italic">
+                  Nenhum adicional premium
+                </div>
+              </div>
+
+            </div>
+
+            <!-- TOTAL PRICE BOX -->
+            <div class="mt-6 pt-4 border-t-2 border-purple-800 bg-purple-950/80 -mx-6 -mb-6 p-6 rounded-b-3xl">
+              <div class="flex items-baseline justify-between mb-4">
+                <div>
+                  <span class="text-xs font-semibold text-purple-300 uppercase tracking-wider block">Total Calculado</span>
+                  <span class="text-[10px] text-lime-400">Sem taxas ocultas</span>
+                </div>
+                <div class="text-right">
+                  <span class="font-display text-3xl sm:text-4xl font-black text-lime-400 tracking-tight" id="summary-total-price">
+                    R$ 20,00
+                  </span>
+                </div>
+              </div>
+
+              <!-- Main WhatsApp CTA Button -->
+              <button onclick="sendOrderWhatsApp()" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-lime-400 via-lime-300 to-emerald-400 hover:from-lime-300 hover:to-emerald-300 text-purple-950 font-black text-base shadow-glow-lime hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group cursor-pointer">
+                <span class="text-xl">🟣</span>
+                <span>Enviar Pedido via WhatsApp</span>
+                <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+                </svg>
+              </button>
+
+              <p class="text-center text-[10px] text-purple-400 mt-2.5">
+                🔒 Pedido direto e seguro com nossa equipe no WhatsApp
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Live WhatsApp Preview Box -->
+          <div class="bg-purple-950/40 border border-purple-800/50 rounded-2xl p-4 text-xs">
+            <div class="flex items-center gap-1.5 text-lime-400 font-bold mb-2">
+              <span>💬</span> Prévia da Mensagem Formatada:
+            </div>
+            <pre id="whatsapp-preview" class="whitespace-pre-wrap font-mono text-[11px] text-purple-200/90 bg-purple-950/80 p-3 rounded-xl border border-purple-900 overflow-x-auto leading-relaxed">
+🟣 *NOVO PEDIDO DE AÇAÍ*
+...
+            </pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= DIFERENCIAIS / BANNER ================= -->
+  <section id="diferenciais" class="py-16 bg-gradient-to-r from-purple-950 via-purple-900 to-purple-950 border-y border-purple-800/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-lime-400 font-bold text-xs uppercase tracking-widest">Qualidade Incomparável</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-1">Por Que Nosso Açaí é o Favorito?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center sm:text-left">
+        <div class="bg-purple-950/50 border border-purple-800/60 p-6 rounded-2xl flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-lime-400/10 border border-lime-400/20 text-lime-400 text-2xl">
+            🌱
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg">Polpa Especial do Pará</h3>
+            <p class="text-purple-300 text-xs sm:text-sm mt-1">Colheita sustentável na Amazônia, batido sem cristais de gelo e com pureza máxima.</p>
+          </div>
+        </div>
+
+        <div class="bg-purple-950/50 border border-purple-800/60 p-6 rounded-2xl flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-lime-400/10 border border-lime-400/20 text-lime-400 text-2xl">
+            🍓
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg">Frutas Fresquinhas</h3>
+            <p class="text-purple-300 text-xs sm:text-sm mt-1">Morangos selecionados e bananas frescas cortadas rigorosamente no momento do pedido.</p>
+          </div>
+        </div>
+
+        <div class="bg-purple-950/50 border border-purple-800/60 p-6 rounded-2xl flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-lime-400/10 border border-lime-400/20 text-lime-400 text-2xl">
+            ⚡
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg">Entrega Térmica Express</h3>
+            <p class="text-purple-300 text-xs sm:text-sm mt-1">Seu copo chega firme, geladinho e intacto como se tivesse acabado de sair do balcão.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AVALIAÇÕES ================= -->
+  <section id="avaliacoes" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-lime-400 font-bold text-xs uppercase tracking-widest">Depoimentos Reais</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-1">Quem Prova, Vira Fã</h2>
+        <p class="text-purple-200/80 text-sm sm:text-base mt-2">Veja a opinião dos nossos clientes apaixonados pelo Tropical Açaí.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Depoimento 1 -->
+        <div class="bg-gradient-to-b from-purple-900/40 to-purple-950/60 border border-purple-800/50 p-6 rounded-3xl relative">
+          <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
+          <p class="text-purple-200 text-sm italic mb-6">
+            "Melhor açaí da região sem dúvidas! A textura é muito aveludada, e os cremes de Nutella e Pistache são surreais de gostosos. Chegou super rápido!"
+          </p>
+          <div class="flex items-center gap-3">
+            <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces" alt="Juliana Costa">
+            <div>
+              <p class="font-bold text-white text-sm">Juliana Costa</p>
+              <p class="text-purple-400 text-xs">Pediu Copo 500ml</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-gradient-to-b from-purple-900/40 to-purple-950/60 border border-purple-800/50 p-6 rounded-3xl relative">
+          <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
+          <p class="text-purple-200 text-sm italic mb-6">
+            "O montador no site é maravilhoso e super prático. Montei exatamente do jeito que eu queria e quando mandei no WhatsApp o pedido já foi confirmado na hora."
+          </p>
+          <div class="flex items-center gap-3">
+            <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces" alt="Lucas Mendes">
+            <div>
+              <p class="font-bold text-white text-sm">Lucas Mendes</p>
+              <p class="text-purple-400 text-xs">Pediu Tigela 700ml</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-gradient-to-b from-purple-900/40 to-purple-950/60 border border-purple-800/50 p-6 rounded-3xl relative">
+          <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
+          <p class="text-purple-200 text-sm italic mb-6">
+            "Amei a opção de açaí zero açúcar com frutas e granola. Super saudável, muito saboroso e atendimento impecável. Nota 10!"
+          </p>
+          <div class="flex items-center gap-3">
+            <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces" alt="Camila Silveira">
+            <div>
+              <p class="font-bold text-white text-sm">Camila Silveira</p>
+              <p class="text-purple-400 text-xs">Pediu Copo 300ml</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#120021] border-t border-purple-900/70 pt-14 pb-8 text-xs text-purple-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Brand Col -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">🍧</span>
+            <span class="font-display text-2xl font-bold text-white">Tropical<span class="text-lime-400">Açaí</span></span>
+          </div>
+          <p class="text-purple-300/80 leading-relaxed">
+            Açaí Concept & Lounge. Trazendo a verdadeira essência da Amazônia com frescor, energia e muito sabor.
+          </p>
+        </div>
+
+        <!-- Horários -->
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-3 text-sm">🕒 Atendimento</h4>
+          <ul class="space-y-2">
+            <li>Terça a Domingo: 13h00 às 23h00</li>
+            <li>Segunda-feira: Fechado para manutenção</li>
+            <li class="text-lime-400 font-semibold">● Pedidos pelo WhatsApp até 22h45</li>
+          </ul>
+        </div>
+
+        <!-- Localização -->
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-3 text-sm">📍 Onde Estamos</h4>
+          <p class="leading-relaxed">
+            Av. Principal dos Trópicos, nº 1420<br>
+            Bairro Paraíso das Frutas<br>
+            Delivery em até 7km de raio!
+          </p>
+        </div>
+
+        <!-- Contato / Redes -->
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-3 text-sm">📱 Contato</h4>
+          <p class="mb-2">WhatsApp: (11) 99999-9999</p>
+          <p class="mb-4">Instagram: @tropicalacai.oficial</p>
+          <div class="flex gap-2">
+            <span class="px-2.5 py-1 rounded-lg bg-purple-900/80 border border-purple-700 text-lime-400 font-bold">PIX</span>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-900/80 border border-purple-700 text-lime-400 font-bold">Cartões</span>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-900/80 border border-purple-700 text-lime-400 font-bold">Dinheiro</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 border-t border-purple-900/50 flex flex-col sm:flex-row items-center justify-between gap-4 text-purple-400 text-center sm:text-left">
+        <p>© 2026 Tropical Açaí / Açaí Concept. Todos os direitos reservados.</p>
+        <p class="flex items-center gap-1 justify-center">
+          Feito com <span class="text-red-500">❤️</span> e açaí puro.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // --- CONFIGURAÇÃO DA LOJA ---
+    // Substitua pelo número real de WhatsApp da loja (com DDI e DDD sem traços ou espaços)
+    const STORE_WHATSAPP_NUMBER = "5511999999999";
+
+    // --- TABELA DE TAMANHOS ---
+    const SIZES_DATA = {
+      '300ml': { name: 'Copo 300ml', price: 14.00, freeLimit: 3 },
+      '500ml': { name: 'Copo 500ml', price: 20.00, freeLimit: 4 },
+      '700ml': { name: 'Tigela 700ml', price: 28.00, freeLimit: 5 }
+    };
+
+    // --- LISTA DE ACOMPANHAMENTOS DISPONÍVEIS ---
+    const AVAILABLE_TOPPINGS = [
+      { id: 'leite-po', name: 'Leite em Pó', icon: '🥛' },
+      { id: 'granola', name: 'Granola Crocante', icon: '🥣' },
+      { id: 'pacoca', name: 'Paçoca de Amendoim', icon: '🥜' },
+      { id: 'morango', name: 'Morango Fresco', icon: '🍓' },
+      { id: 'banana', name: 'Banana em Rodelas', icon: '🍌' },
+      { id: 'leite-condensado', name: 'Leite Condensado', icon: '🍶' },
+      { id: 'confeti', name: 'Confetes / M&Ms', icon: '🍬' },
+      { id: 'gotas-choco', name: 'Gotas de Chocolate', icon: '🍫' },
+      { id: 'mel', name: 'Mel Puro Silvestre', icon: '🍯' },
+    ];
+
+    const EXTRA_TOPPING_PRICE = 2.00;
+
+    // --- ESTADO GLOBAL DO PEDIDO ---
+    let orderState = {
+      sizeKey: '500ml',
+      base: 'Açaí Tradicional',
+      selectedToppings: [],
+      selectedPremiums: {}, // { 'Nutella Original': 5.00, ... }
+      deliveryType: 'delivery', // 'delivery' | 'pickup'
+      paymentMethod: 'PIX',
+    };
+
+    // --- INICIALIZAÇÃO DA INTERFACE ---
+    document.addEventListener('DOMContentLoaded', () => {
+      renderToppingsGrid();
+      updateAllUI();
+
+      // Listeners nos inputs do cliente para atualizar a prévia ao vivo
+      document.getElementById('client-name').addEventListener('input', updateWhatsAppPreview);
+      document.getElementById('client-address').addEventListener('input', updateWhatsAppPreview);
+      document.getElementById('order-notes').addEventListener('input', updateWhatsAppPreview);
+    });
+
+    // --- RENDERIZAR GRID DE ACOMPANHAMENTOS ---
+    function renderToppingsGrid() {
+      const container = document.getElementById('toppings-container');
+      container.innerHTML = '';
+
+      AVAILABLE_TOPPINGS.forEach(item => {
+        const isSelected = orderState.selectedToppings.includes(item.name);
+        const card = document.createElement('div');
+        card.id = `topping-${item.id}`;
+        card.className = `option-card ${isSelected ? 'selected' : ''} cursor-pointer bg-purple-950/60 border-2 ${isSelected ? 'border-lime-400' : 'border-purple-800/80'} hover:border-purple-600 rounded-2xl p-3 sm:p-3.5 transition-all flex items-center justify-between group`;
+        card.onclick = () => toggleTopping(item.name);
+
+        card.innerHTML = `
+          <div class="flex items-center gap-2 sm:gap-2.5 truncate">
+            <span class="text-xl sm:text-2xl">${item.icon}</span>
+            <span class="text-xs sm:text-sm font-semibold text-white truncate">${item.name}</span>
+          </div>
+          <div class="check-circle flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 ${isSelected ? 'border-lime-400 bg-lime-400 text-purple-950' : 'border-purple-700 text-transparent'} flex items-center justify-center text-[10px] font-bold">
+            ✓
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    // --- AÇÃO: SELECIONAR TAMANHO ---
+    function selectSize(sizeKey) {
+      orderState.sizeKey = sizeKey;
+
+      // Atualiza classes dos cards de tamanho
+      ['300ml', '500ml', '700ml'].forEach(key => {
+        const card = document.getElementById(`card-size-${key}`);
+        const check = card.querySelector('.check-circle');
+        if (key === sizeKey) {
+          card.classList.add('selected');
+          card.classList.remove('border-purple-800/80');
+          check.classList.add('bg-lime-400', 'border-lime-400', 'text-purple-950');
+          check.classList.remove('border-purple-600');
+        } else {
+          card.classList.remove('selected');
+          card.classList.add('border-purple-800/80');
+          check.classList.remove('bg-lime-400', 'border-lime-400', 'text-purple-950');
+          check.classList.add('border-purple-600');
+        }
+      });
+
+      updateAllUI();
+    }
+
+    // --- AÇÃO: SELECIONAR BASE ---
+    function selectBase(baseName) {
+      orderState.base = baseName;
+
+      const baseMap = {
+        'Açaí Tradicional': 'tradicional',
+        'Açaí com Banana': 'banana',
+        'Açaí Zero Açúcar': 'zero',
+        'Mix Açaí + Cupuaçu': 'cupuacu'
+      };
+
+      Object.entries(baseMap).forEach(([name, idSuffix]) => {
+        const card = document.getElementById(`card-base-${idSuffix}`);
+        const check = card.querySelector('.check-circle');
+        if (name === baseName) {
+          card.classList.add('selected');
+          card.classList.remove('border-purple-800/80');
+          check.classList.add('bg-lime-400', 'border-lime-400', 'text-purple-950');
+          check.classList.remove('border-purple-600');
+        } else {
+          card.classList.remove('selected');
+          card.classList.add('border-purple-800/80');
+          check.classList.remove('bg-lime-400', 'border-lime-400', 'text-purple-950');
+          check.classList.add('border-purple-600');
+        }
+      });
+
+      updateAllUI();
+    }
+
+    // --- AÇÃO: ALTERNAR ACOMPANHAMENTO ---
+    function toggleTopping(toppingName) {
+      const index = orderState.selectedToppings.indexOf(toppingName);
+      if (index > -1) {
+        orderState.selectedToppings.splice(index, 1);
+      } else {
+        orderState.selectedToppings.push(toppingName);
+      }
+      renderToppingsGrid();
+      updateAllUI();
+    }
+
+    // --- AÇÃO: ALTERNAR ADICIONAL PREMIUM ---
+    function togglePremium(name, price) {
+      const cardMap = {
+        'Nutella Original': 'card-prem-nutella',
+        'Creme de Ninho': 'card-prem-ninho',
+        'Creme de Pistache': 'card-prem-pistache'
+      };
+
+      const card = document.getElementById(cardMap[name]);
+      const check = card.querySelector('.check-circle');
+
+      if (orderState.selectedPremiums[name]) {
+        delete orderState.selectedPremiums[name];
+        card.classList.remove('selected');
+        card.classList.add('border-purple-800/80');
+        check.classList.remove('bg-lime-400', 'border-lime-400', 'text-purple-950');
+        check.classList.add('border-purple-600');
+      } else {
+        orderState.selectedPremiums[name] = price;
+        card.classList.add('selected');
+        card.classList.remove('border-purple-800/80');
+        check.classList.add('bg-lime-400', 'border-lime-400', 'text-purple-950');
+        check.classList.remove('border-purple-600');
+      }
+
+      updateAllUI();
+    }
+
+    // --- AÇÃO: TIPO DE ENTREGA ---
+    function setDeliveryType(type) {
+      orderState.deliveryType = type;
+      const btnDelivery = document.getElementById('btn-delivery-house');
+      const btnPickup = document.getElementById('btn-delivery-pickup');
+      const addressBox = document.getElementById('address-container');
+
+      if (type === 'delivery') {
+        btnDelivery.className = 'py-3 px-4 rounded-xl border-2 border-lime-400 bg-lime-400/10 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all';
+        btnPickup.className = 'py-3 px-4 rounded-xl border-2 border-purple-800 bg-purple-950/70 text-purple-300 font-bold text-sm flex items-center justify-center gap-2 hover:border-purple-600 transition-all';
+        addressBox.classList.remove('hidden');
+      } else {
+        btnPickup.className = 'py-3 px-4 rounded-xl border-2 border-lime-400 bg-lime-400/10 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all';
+        btnDelivery.className = 'py-3 px-4 rounded-xl border-2 border-purple-800 bg-purple-950/70 text-purple-300 font-bold text-sm flex items-center justify-center gap-2 hover:border-purple-600 transition-all';
+        addressBox.classList.add('hidden');
+      }
+
+      updateWhatsAppPreview();
+    }
+
+    // --- AÇÃO: FORMA DE PAGAMENTO ---
+    function setPaymentMethod(method) {
+      orderState.paymentMethod = method;
+
+      const methods = [
+        { key: 'PIX', id: 'pay-pix' },
+        { key: 'Cartão', id: 'pay-card' },
+        { key: 'Dinheiro', id: 'pay-cash' }
+      ];
+
+      methods.forEach(m => {
+        const btn = document.getElementById(m.id);
+        if (m.key === method) {
+          btn.className = 'payment-btn py-3 px-3 rounded-xl border-2 border-lime-400 bg-lime-400/10 text-white font-bold text-xs sm:text-sm flex flex-col items-center gap-1 transition-all';
+        } else {
+          btn.className = 'payment-btn py-3 px-3 rounded-xl border-2 border-purple-800 bg-purple-950/70 text-purple-300 font-bold text-xs sm:text-sm flex flex-col items-center gap-1 hover:border-purple-600 transition-all';
+        }
+      });
+
+      updateWhatsAppPreview();
+    }
+
+    // --- CÁLCULO GERAL E ATUALIZAÇÃO DA TELA ---
+    function updateAllUI() {
+      const currentSize = SIZES_DATA[orderState.sizeKey];
+      const selectedCount = orderState.selectedToppings.length;
+      const freeLimit = currentSize.freeLimit;
+
+      // 1. Atualizar limite e contador de acompanhamentos
+      document.getElementById('label-free-limit').textContent = freeLimit;
+      const counterBadge = document.getElementById('toppings-counter-badge');
+      counterBadge.textContent = `${selectedCount} / ${freeLimit}`;
+
+      if (selectedCount > freeLimit) {
+        counterBadge.className = 'text-sm font-black text-amber-300 animate-pulse';
+      } else {
+        counterBadge.className = 'text-sm font-black text-lime-400';
+      }
+
+      // 2. Calcular preço de extras (acompanhamentos além do limite)
+      const extraCount = Math.max(0, selectedCount - freeLimit);
+      const extraToppingsTotal = extraCount * EXTRA_TOPPING_PRICE;
+
+      // 3. Calcular preço de adicionais premium
+      let premiumTotal = 0;
+      Object.values(orderState.selectedPremiums).forEach(price => {
+        premiumTotal += price;
+      });
+
+      // 4. Preço Total
+      const totalPrice = currentSize.price + extraToppingsTotal + premiumTotal;
+
+      // 5. Atualizar Coluna de Resumo (Sidebar)
+      document.getElementById('summary-size').textContent = currentSize.name;
+      document.getElementById('summary-size-desc').textContent = `Inclui até ${freeLimit} acompanhamentos grátis`;
+      document.getElementById('summary-size-price').textContent = `R$ ${currentSize.price.toFixed(2).replace('.', ',')}`;
+
+      document.getElementById('summary-base').textContent = orderState.base;
+
+      // Resumo de acompanhamentos
+      document.getElementById('summary-toppings-count').textContent = `${selectedCount} selecionado(s)`;
+      const toppingsListDiv = document.getElementById('summary-toppings-list');
+      if (selectedCount === 0) {
+        toppingsListDiv.innerHTML = '<span class="text-purple-400 italic">Nenhum acompanhamento escolhido</span>';
+      } else {
+        toppingsListDiv.innerHTML = orderState.selectedToppings.map(t => `<span class="inline-block bg-purple-900/80 px-2 py-0.5 rounded mr-1 mb-1 text-[11px] border border-purple-700/60">${t}</span>`).join('');
+      }
+
+      // Linha de Extras (se houver acompanhamentos extras)
+      const extraRow = document.getElementById('summary-extra-toppings-row');
+      if (extraCount > 0) {
+        extraRow.classList.remove('hidden');
+        extraRow.classList.add('flex');
+        document.getElementById('summary-extra-toppings-title').textContent = `${extraCount}x Acompanhamento Extra (+R$ 2,00)`;
+        document.getElementById('summary-extra-toppings-items').textContent = `Excedeu limite de ${freeLimit} itens inclusos`;
+        document.getElementById('summary-extra-toppings-price').textContent = `+ R$ ${extraToppingsTotal.toFixed(2).replace('.', ',')}`;
+      } else {
+        extraRow.classList.add('hidden');
+        extraRow.classList.remove('flex');
+      }
+
+      // Resumo de Adicionais Premium
+      const premiumListDiv = document.getElementById('summary-premium-list');
+      const premiumKeys = Object.keys(orderState.selectedPremiums);
+      document.getElementById('summary-premium-price').textContent = premiumTotal > 0 ? `+ R$ ${premiumTotal.toFixed(2).replace('.', ',')}` : 'R$ 0,00';
+      if (premiumKeys.length === 0) {
+        premiumListDiv.innerHTML = '<span class="text-purple-400 italic">Nenhum adicional premium</span>';
+      } else {
+        premiumListDiv.innerHTML = premiumKeys.map(k => `<span class="inline-block bg-lime-400/20 text-lime-300 px-2 py-0.5 rounded mr-1 mb-1 text-[11px] border border-lime-400/30">${k}</span>`).join('');
+      }
+
+      // Total Final
+      document.getElementById('summary-total-price').textContent = `R$ ${totalPrice.toFixed(2).replace('.', ',')}`;
+
+      // 6. Atualizar prévia do WhatsApp
+      updateWhatsAppPreview();
+    }
+
+    // --- GERAR MENSAGEM DO WHATSAPP ---
+    function generateWhatsAppMessage() {
+      const clientName = document.getElementById('client-name').value.trim() || '[Nome]';
+      const address = document.getElementById('client-address').value.trim();
+      const notes = document.getElementById('order-notes').value.trim();
+      
+      let deliveryText = '';
+      if (orderState.deliveryType === 'delivery') {
+        deliveryText = address ? address : '[Endereço de Entrega]';
+      } else {
+        deliveryText = 'Retirada no Local';
+      }
+
+      const currentSize = SIZES_DATA[orderState.sizeKey];
+      const selectedCount = orderState.selectedToppings.length;
+      const extraCount = Math.max(0, selectedCount - currentSize.freeLimit);
+      const extraToppingsTotal = extraCount * EXTRA_TOPPING_PRICE;
+
+      let premiumTotal = 0;
+      Object.values(orderState.selectedPremiums).forEach(p => premiumTotal += p);
+      const total = (currentSize.price + extraToppingsTotal + premiumTotal).toFixed(2).replace('.', ',');
+
+      // Formatação dos acompanhamentos
+      let toppingsFormatted = 'Nenhum';
+      if (orderState.selectedToppings.length > 0) {
+        toppingsFormatted = orderState.selectedToppings.join(', ');
+        if (extraCount > 0) {
+          toppingsFormatted += ` (${extraCount} extra cobrado)`;
+        }
+      }
+
+      // Formatação dos adicionais premium
+      const premiumKeys = Object.keys(orderState.selectedPremiums);
+      const extrasFormatted = premiumKeys.length > 0 ? premiumKeys.join(', ') : 'Nenhum';
+
+      // Mensagem conforme estrutura solicitada
+      let msg = `🟣 *NOVO PEDIDO DE AÇAÍ*
+*Cliente:* ${clientName}
+*Entrega:* ${deliveryText}
+*Pagamento:* ${orderState.paymentMethod}
+---
+*Copo:* ${currentSize.name}
+*Base:* ${orderState.base}
+*Acompanhamentos:* ${toppingsFormatted}
+*Extras:* ${extrasFormatted}
+---
+*TOTAL:* R$ ${total}`;
+
+      if (notes) {
+        msg += `\n*Observações:* ${notes}`;
+      }
+
+      return msg;
+    }
+
+    // --- ATUALIZAR PRÉVIA DO WHATSAPP NA TELA ---
+    function updateWhatsAppPreview() {
+      const previewBox = document.getElementById('whatsapp-preview');
+      if (previewBox) {
+        previewBox.textContent = generateWhatsAppMessage();
+      }
+    }
+
+    // --- ENVIAR PEDIDO VIA WHATSAPP ---
+    function sendOrderWhatsApp() {
+      const clientName = document.getElementById('client-name').value.trim();
+      const address = document.getElementById('client-address').value.trim();
+
+      // Validações amigáveis
+      if (!clientName) {
+        alert('Por favor, informe seu Nome Completo na Etapa 5 antes de enviar o pedido.');
+        document.getElementById('client-name').focus();
+        return;
+      }
+
+      if (orderState.deliveryType === 'delivery' && !address) {
+        alert('Por favor, informe o Endereço de Entrega para que possamos levar seu açaí até você.');
+        document.getElementById('client-address').focus();
+        return;
+      }
+
+      const message = generateWhatsAppMessage();
+      const encodedMsg = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${STORE_WHATSAPP_NUMBER}?text=${encodedMsg}`;
+
+      // Abre o WhatsApp em nova aba
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+
+</body>
+</html>
